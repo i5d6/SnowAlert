@@ -6,7 +6,7 @@ WITH table_spend AS (
     table_name,
     SUM(credits_used) AS credits
   FROM snowflake.account_usage.automatic_clustering_history
-  WHERE DATEDIFF(HOUR, end_time, CURRENT_TIMESTAMP) < 5
+  WHERE end_time > DATEADD(HOUR, -5, CURRENT_TIMESTAMP)
   GROUP BY 1, 2
   ORDER BY 3 DESC
 )
@@ -23,7 +23,7 @@ WITH table_spend AS (
     table_name,
     SUM(credits_used) AS credits
   FROM snowflake.account_usage.materialized_view_refresh_history
-  WHERE DATEDIFF(HOUR, end_time, CURRENT_TIMESTAMP) < 5
+  WHERE end_time > DATEADD(HOUR, -5, CURRENT_TIMESTAMP)
   GROUP BY 1, 2
   ORDER BY 3 DESC)
 SELECT * FROM table_spend

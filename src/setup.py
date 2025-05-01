@@ -12,7 +12,7 @@ setup(
         'jira==2.0.0',
         'PyYAML==5.3.1',
         'xmltodict==0.12.0',
-        'snowflake-connector-python==2.2.10',
+        'snowflake-connector-python==3.13.1',
         'snowflake-sqlalchemy==1.2.3',
         'pandas==1.0.4',
         'pybrake==0.4.0',
@@ -35,8 +35,8 @@ setup(
         'simple_salesforce==0.74.3',
         'pdpyras==4.0',
         'duo_client==4.2.3',
-        'cryptography==3.0.0',
-        'requests==2.23.0',
+        'cryptography==44.0.1',
+        'requests==2.32.2',
     ],
     extras_require={
         'dev': [

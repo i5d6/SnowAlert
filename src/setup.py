@@ -35,8 +35,8 @@ setup(
         'simple_salesforce==0.74.3',
         'pdpyras==4.0',
         'duo_client==4.2.3',
-        'cryptography==44.0.1',
-        'requests==2.32.2',
+        'cryptography==46.0.5',
+        'requests==2.32.4',
     ],
     extras_require={
         'dev': [
